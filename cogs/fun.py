@@ -18,6 +18,13 @@ class Fun_Commands:
         """ Consult 8ball to receive an answer """
         answer = random.choice(lists.ballresponse)
         await ctx.send(f"🎱 **Question:** {question}\n**Answer:** {answer}")
+        
+    @commands.command(aliases=['conch'])
+    async def magicconchshell(self, ctx, *, question: commands.clean_content):
+        """ Magic Conch Shell to receive an answer """
+        answer = random.choice(lists.ballresponse)
+        await ctx.send(f"🐚 **Question:** {question}\n**Answer:** {answer}")
+
 
     async def randomimageapi(self, ctx, url, endpoint):
         try:
