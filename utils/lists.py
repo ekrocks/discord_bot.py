@@ -4,3 +4,8 @@ ballresponse = [
   "You'll be the judge", 'no... (╯°□°）╯︵ ┻━┻', 'no... baka',
   'senpai, pls no ;-;'
 ]
+
+shellresponse = [
+  'Yes', 'No', 'Nothing', 'Try asking again',
+  'I don\'t think so', 'Neither', 'Maybe someday'
+]
