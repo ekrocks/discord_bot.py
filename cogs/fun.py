@@ -22,7 +22,7 @@ class Fun_Commands:
     @commands.command(aliases=['conch'])
     async def magicconchshell(self, ctx, *, question: commands.clean_content):
         """ Magic Conch Shell to receive an answer """
-        answer = random.choice(lists.ballresponse)
+        answer = random.choice(lists.shellresponse)
         await ctx.send(f"🐚 **Question:** {question}\n**Answer:** {answer}")
 
 
