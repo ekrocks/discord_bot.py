@@ -31,8 +31,8 @@ class Fun_Commands:
         answer = random.choice(lists.dwightquotes)
         await ctx.send(f"\"{answer}\" - Dwight Schrute")
 
-    @commands.command(aliases=['Dwight','dwight','Schrute','schrute'])
-    async def dwightschrute(self, ctx):
+    @commands.command(aliases=['Greed','greed'])
+    async def greedquote(self, ctx):
         """ Greed quotes """
         answer = random.choice(lists.greedquotes)
         await ctx.send(f"\"{answer}\" - Greed")
