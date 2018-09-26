@@ -17,20 +17,25 @@ class Fun_Commands:
     async def eightball(self, ctx, *, question: commands.clean_content):
         """ Consult 8ball to receive an answer """
         answer = random.choice(lists.ballresponse)
-        await ctx.send(f"🎱 **Question:** {question}\n**Answer:** {answer}")
+        await ctx.send(f"ðŸŽ± **Question:** {question}\n**Answer:** {answer}")
         
     @commands.command(aliases=['Conch','Shell','shell'])
     async def magicconchshell(self, ctx, *, question: commands.clean_content):
         """ Magic Conch Shell to receive an answer """
         answer = random.choice(lists.shellresponse)
-        await ctx.send(f"🐚 **Question:** {question}\n**Answer:** {answer}")
+        await ctx.send(f"ðŸš **Question:** {question}\n**Answer:** {answer}")
        
     @commands.command(aliases=['Dwight','dwight','Schrute','schrute'])
     async def dwightschrute(self, ctx):
-        """ Magic Conch Shell to receive an answer """
+        """ Dwight Schrute quotes """
         answer = random.choice(lists.dwightquotes)
-        await ctx.send("\""+{answer}+"\" - Dwight Schrute")
+        await ctx.send(f"\"{answer}\" - Dwight Schrute")
 
+    @commands.command(aliases=['Dwight','dwight','Schrute','schrute'])
+    async def dwightschrute(self, ctx):
+        """ Greed quotes """
+        answer = random.choice(lists.greedquotes)
+        await ctx.send(f"\"{answer}\" - Greed")
 
     async def randomimageapi(self, ctx, url, endpoint):
         try:
@@ -90,7 +95,7 @@ class Fun_Commands:
         embed = discord.Embed(colour=0xC29FAF, description=f"**{result['word']}**\n*by: {result['author']}*")
         embed.add_field(name='Definition', value=definition, inline=False)
         embed.add_field(name='Example', value=result['example'], inline=False)
-        embed.set_footer(text=f"👍 {result['thumbs_up']} | 👎 {result['thumbs_down']}")
+        embed.set_footer(text=f"ðŸ‘ {result['thumbs_up']} | ðŸ‘Ž {result['thumbs_down']}")
 
         try:
             await ctx.send(embed=embed)
@@ -103,14 +108,14 @@ class Fun_Commands:
         Everything you type after reverse will of course, be reversed
         """
         t_rev = text[::-1].replace("@", "@\u200B").replace("&", "&\u200B")
-        await ctx.send(f"🔁 {t_rev}")
+        await ctx.send(f"ðŸ” {t_rev}")
 
     @commands.command()
     async def password(self, ctx):
         """ Generates a random password string for you """
         if hasattr(ctx, 'guild') and ctx.guild is not None:
             await ctx.send(f"Sending you a private message with your random generated password **{ctx.author.name}**")
-        await ctx.author.send(f"🎁 **Here is your password:**\n{secrets.token_urlsafe(18)}")
+        await ctx.author.send(f"ðŸŽ **Here is your password:**\n{secrets.token_urlsafe(18)}")
 
     @commands.command()
     async def rate(self, ctx, *, thing: commands.clean_content):
@@ -133,13 +138,13 @@ class Fun_Commands:
         r = random.randint(1, 100)
         hot = r / 1.17
 
-        emoji = "💔"
+        emoji = "ðŸ’”"
         if hot > 25:
-            emoji = "❤"
+            emoji = "â¤"
         if hot > 50:
-            emoji = "💖"
+            emoji = "ðŸ’–"
         if hot > 75:
-            emoji = "💞"
+            emoji = "ðŸ’ž"
 
         await ctx.send(f"**{user.name}** is **{hot:.2f}%** hot {emoji}")
 
@@ -149,7 +154,7 @@ class Fun_Commands:
     @commands.cooldown(rate=1, per=3.0, type=commands.BucketType.user)
     async def slot(self, ctx):
         """ Roll the slot machine """
-        emojis = "🍎🍊🍐🍋🍉🍇🍓🍒"
+        emojis = "ðŸŽðŸŠðŸðŸ‹ðŸ‰ðŸ‡ðŸ“ðŸ’"
         a = random.choice(emojis)
         b = random.choice(emojis)
         c = random.choice(emojis)
@@ -157,11 +162,11 @@ class Fun_Commands:
         slotmachine = f"**[ {a} {b} {c} ]\n{ctx.author.name}**,"
 
         if (a == b == c):
-            await ctx.send(f"{slotmachine} All matching, you won! 🎉")
+            await ctx.send(f"{slotmachine} All matching, you won! ðŸŽ‰")
         elif (a == b) or (a == c) or (b == c):
-            await ctx.send(f"{slotmachine} 2 in a row, you won! 🎉")
+            await ctx.send(f"{slotmachine} 2 in a row, you won! ðŸŽ‰")
         else:
-            await ctx.send(f"{slotmachine} No match, you lost 😢")
+            await ctx.send(f"{slotmachine} No match, you lost ðŸ˜¢")
 
 
 def setup(bot):
