@@ -19,11 +19,17 @@ class Fun_Commands:
         answer = random.choice(lists.ballresponse)
         await ctx.send(f"🎱 **Question:** {question}\n**Answer:** {answer}")
         
-    @commands.command(aliases=['conch'])
+    @commands.command(aliases=['Conch','Shell','shell'])
     async def magicconchshell(self, ctx, *, question: commands.clean_content):
         """ Magic Conch Shell to receive an answer """
         answer = random.choice(lists.shellresponse)
         await ctx.send(f"🐚 **Question:** {question}\n**Answer:** {answer}")
+       
+    @commands.command(aliases=['Dwight','dwight','Schrute','schrute'])
+    async def dwightschrute(self, ctx):
+        """ Magic Conch Shell to receive an answer """
+        answer = random.choice(lists.dwightquotes)
+        await ctx.send("\""+{answer}+"\" - Dwight Schrute")
 
 
     async def randomimageapi(self, ctx, url, endpoint):
