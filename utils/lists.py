@@ -36,4 +36,13 @@ dwightquotes = [
   'I am better than you have ever been or ever will be.','I overslept. Damn rooster didn’t crow.',
   'Learn your rules. You better learn your rules. If you don\’t, you\’ll be eaten in your sleep.'
 ]
+
+greedquotes = [
   
+  'I’m greedy as hell, only out for myself…',
+  'They weren\'t my "friends". Henchmen are like money and women: possessions. And killing them is like stealing from me. And NOBODY steals from me!',
+  'Greed may not be good, but it’s not so bad either. You humans think greed is just for money or power, but everyone wants something they can’t have.',
+  'They don’t call me Greed for nothing! I want money! Women! Status! And power! I want everything this world’s selling and eternity is topping the list! Understand?',
+  'I want everything you can possibly imagine. I want money and women, power and sex, status, glory! I demand the finer things in life!',
+  'I disagree. You want to bring back someone that you’ve lost. You might want money. Maybe you want women. Or, you might want to protect the world. These are all common things people want. Things that their hearts desire. Greed may not be good, but it’s not so bad, either. You humans think greed is just for money and power! But everyone wants something they don’t have.'
+]
